@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="EduManage: All-in-one school management software for attendance, grades, and parent communication.">
+    <meta name="keywords" content="school management software, education, attendance tracking, grade management">
+    <title>EduManage - School Management Software</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e40af">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png">
+    <!-- Monetag Ads Script (Placeholder - Replace with your Monetag script) -->
+    <script type="text/javascript">
+        // Replace with your actual Monetag script URL
+        const monetagScript = document.createElement('script');
+        monetagScript.src = 'https://monetag.com/adscript.js'; // Update with your Monetag URL
+        monetagScript.onerror = () => console.warn('Monetag ad script failed to load');
+        document.head.appendChild(monetagScript);
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav role="navigation" class="bg-blue-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">EduManage</h1>
+            <!-- Hamburger Icon (Visible on Mobile) -->
+            <button id="hamburger" class="lg:hidden focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex lg:gap-6">
+                <a href="/" class="nav-link hover:underline">Home</a>
+                <a href="/features" class="nav-link hover:underline">Features</a>
+                <a href="/pricing" class="nav-link hover:underline">Pricing</a>
+                <a href="/contact" class="nav-link hover:underline">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu"
+            class="lg:hidden bg-blue-800 flex-col items-center gap-6 py-6 fixed top-0 left-0 w-full min-h-screen transform translate-x-full opacity-0 z-40">
+            <a href="/" class="nav-link text-xl hover:underline">Home</a>
+            <a href="/features" class="nav-link text-xl hover:underline">Features</a>
+            <a href="/pricing" class="nav-link text-xl hover:underline">Pricing</a>
+            <a href="/contact" class="nav-link text-xl hover:underline">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Streamline Your School with EduManage</h2>
+            <p class="text-lg sm:text-xl mb-6">All-in-one software for attendance, grades, communication, and more.</p>
+            <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Get Started
+                Free</button>
+        </div>
+    </section>
+
+    <!-- Monetag Ad Banner (Top) -->
+    <div class="my-4 text-center">
+        <script>monetag && monetag.showBanner('top-ad-slot');</script>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Why Choose EduManage?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Attendance Tracking</h3>
+                    <p class="text-gray-600">Easily record and monitor student attendance with real-time reports.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Grade Management</h3>
+                    <p class="text-gray-600">Simplify grading with automated calculations and parent access.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Parent Communication</h3>
+                    <p class="text-gray-600">Keep parents informed with instant notifications and updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    < Madsen School Management System, offering a comprehensive solution for schools to streamline their administrative
+        tasks. -->
+        <section class="bg-gray-200 py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">What Our Users Say</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic">"EduManage has transformed our school’s operations!"</p>
+                        <p class="mt-4 font-semibold">– Jane Doe, Principal</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic">"The parent portal is a game-changer."</p>
+                        <p class="mt-4 font-semibold">– John Smith, Teacher</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Affordable Plans</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold mb-2">Basic</h3>
+                        <p class="text-2xl font-bold mb-4">$9/month</p>
+                        <p class="text-gray-600">Core features for small schools.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Choose
+                            Plan</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold mb-2">Pro</h3>
+                        <p class="text-2xl font-bold mb-4">$19/month</p>
+                        <p class="text-gray-600">Advanced tools for growing schools.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Choose
+                            Plan</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+                        <p class="text-2xl font-bold mb-4">Custom</p>
+                        <p class="text-gray-600">Tailored solutions for large institutions.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-blue-800 text-white py-12">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-lg mb-6">Have questions? Contact us today!</p>
+                <button class="bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Email
+                    Us</button>
+            </div>
+        </section>
+
+        <!-- Monetag Ad Banner (Bottom) -->
+        <div class="my-4 text-center">
+            <script>monetag && monetag.showBanner('bottom-ad-slot');</script>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white text-center p-4">
+            <p class="text-sm">EduManage © 2025 | All Rights Reserved</p>
+        </footer>
+
+        <!-- Service Worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(reg => console.log('Service Worker registered'))
+                        .catch(err => console.error('Service Worker registration failed. Offline support may be unavailable:', err));
+                });
+            }
+        </script>
+
+        <!-- Navigation Logic -->
+        <script>
+            const navLinks = document.querySelectorAll('.nav-link');
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu
+            hamburger.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('is-open');
+                mobileMenu.classList.toggle('is-open', !isOpen);
+                mobileMenu.classList.toggle('translate-x-full', isOpen);
+                mobileMenu.classList.toggle('opacity-0', isOpen);
+                hamburger.setAttribute('aria-expanded', !isOpen);
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+                    history.pushState({}, '', href);
+                    scrollToSection(href);
+                    // Close mobile menu
+                    mobileMenu.classList.remove('is-open');
+                    mobileMenu.classList.add('translate-x-full', 'opacity-0');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target) && mobileMenu.classList.contains('is-open')) {
+                    mobileMenu.classList.remove('is-open');
+                    mobileMenu.classList.add('translate-x-full', 'opacity-0');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            function scrollToSection(path) {
+                const sectionId = path === '/' ? 'hero' : path.slice(1);
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            window.addEventListener('popstate', () => {
+                scrollToSection(window.location.pathname);
+            });
+
+            // Initial scroll based on URL
+            window.addEventListener('load', () => {
+                scrollToSection(window.location.pathname);
+            });
+        </script>
+</body>
+
+</html>
